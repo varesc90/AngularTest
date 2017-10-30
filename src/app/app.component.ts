@@ -2,12 +2,18 @@ import { Component } from '@angular/core';
 
 
 
+
 @Component({
     selector: 'my-app',
+    styleUrls: ['./app.component.css'],
     template: `
         <h1>{{title}}</h1>
-        <a routerLink="/heroes">Heroes</a>
-        <router-outlet></router-outlet>`
+        <nav>
+            <a routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
+            <a routerLinkActive="active" routerLink="/heroes">Heroes</a>
+        </nav>
+        <router-outlet></router-outlet>
+    `
 })
 
 
